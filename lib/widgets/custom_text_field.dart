@@ -6,15 +6,19 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart' as FontAwesome;
 import 'package:gap/gap.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({
+   CustomTextField({
     super.key,
     required this.hintText,
     required this.controller,
     this.title,
+    this.FontAwesomeIcons,
+    this.showIcon,
   });
 
   final TextEditingController controller;
   final String? hintText, title;
+  final bool? showIcon;
+  final IconData? FontAwesomeIcons;
 
   @override
   Widget build(BuildContext context) {
@@ -42,8 +46,11 @@ class CustomTextField extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const FontAwesome.FaIcon(
-                FontAwesome.FontAwesomeIcons.magnifyingGlass, size: 16,),
+                showIcon ?? true ? FontAwesome.FaIcon(FontAwesomeIcons ?? FontAwesome.FontAwesomeIcons.magnifyingGlass, size: 16,):Container(),
+                
+                //  FontAwesome.FaIcon(
+                // FontAwesomeIcons ?? FontAwesome.FontAwesomeIcons.magnifyingGlass, size: 16,) : null,
+
                 const Gap(5),
                 Expanded(
                   child: TextFormField(

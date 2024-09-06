@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 class LiveStockTile extends StatelessWidget {
   const LiveStockTile({
     super.key,
+    required this.id,
   });
+  final String id;
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +21,13 @@ class LiveStockTile extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
-          leading: Text('Id', style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: Colors.white)),
-          title: Text('Sheep', style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Colors.white)),
-          subtitle: Column(
+          leading: Text(id, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: Colors.white)),
+          title: const Text('Sheep', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Colors.white)),
+          subtitle: const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Breed', style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: Colors.white)),
-              Text(' 3 months', style: const TextStyle(fontSize: 15, color: Colors.white))
+              Text('Breed', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: Colors.white)),
+              Text(' 3 months', style: TextStyle(fontSize: 15, color: Colors.white))
             ],
           ),
           trailing: const Text('Treatment', style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: Colors.white)),

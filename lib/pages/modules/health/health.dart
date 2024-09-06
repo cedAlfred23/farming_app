@@ -45,7 +45,7 @@ class _HealthState extends State<Health> {
                       children: <Widget>[
                         DropdownButtonFormField<String>(
                           value: _recordType,
-                          hint: Text('Select Record Type'),
+                          hint: const Text('Select Record Type'),
                           items: <String>[
                             'Illness',
                             'Vaccination',
@@ -64,48 +64,48 @@ class _HealthState extends State<Health> {
                         ),
                         TextFormField(
                             controller: _dateController,
-                            decoration: InputDecoration(labelText: 'Date')),
+                            decoration: const InputDecoration(labelText: 'Date')),
                         TextFormField(
                             controller: _descriptionController,
                             decoration:
-                                InputDecoration(labelText: 'Description')),
+                                const InputDecoration(labelText: 'Description')),
                         TextFormField(
                             controller: _diagnosisController,
                             decoration:
-                                InputDecoration(labelText: 'Diagnosis')),
+                                const InputDecoration(labelText: 'Diagnosis')),
                         TextFormField(
                             controller: _treatmentController,
                             decoration:
-                                InputDecoration(labelText: 'Treatment')),
+                                const InputDecoration(labelText: 'Treatment')),
                         TextFormField(
                             controller: _medicationController,
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                                 labelText: 'Medication and Dosage')),
                         TextFormField(
                             controller: _administeredByController,
                             decoration:
-                                InputDecoration(labelText: 'Administered By')),
+                                const InputDecoration(labelText: 'Administered By')),
                         TextFormField(
                             controller: _veterinarianNameController,
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                                 labelText: 'Veterinarian Name')),
                         TextFormField(
                             controller: _followUpDateController,
                             decoration:
-                                InputDecoration(labelText: 'Follow-up Date')),
+                                const InputDecoration(labelText: 'Follow-up Date')),
                         TextFormField(
                             controller: _outcomeController,
-                            decoration: InputDecoration(labelText: 'Outcome')),
+                            decoration: const InputDecoration(labelText: 'Outcome')),
                         TextFormField(
                             controller: _notesController,
-                            decoration: InputDecoration(labelText: 'Notes')),
+                            decoration: const InputDecoration(labelText: 'Notes')),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 16.0),
                           child: ElevatedButton(
                             onPressed: () {
                               // Implement the save functionality
                             },
-                            child: Text('Submit'),
+                            child: const Text('Submit'),
                           ),
                         ),
                       ],
@@ -126,7 +126,7 @@ class _HealthState extends State<Health> {
             color: Colors.white,
             child: SfCalendar(
                   view: CalendarView.month,
-                  monthViewSettings: MonthViewSettings(
+                  monthViewSettings: const MonthViewSettings(
                       appointmentDisplayMode:
                           MonthAppointmentDisplayMode.appointment),
                 ),
@@ -165,7 +165,7 @@ class _HealthState extends State<Health> {
               padding: const EdgeInsets.only(bottom: 10),
               color: Colors.white,
               child: CustomTextField(
-                  hintText: 'hintText', controller: TextEditingController()),
+                  hintText: 'Search', controller: TextEditingController()),
             ),
             Column(
               children: [
@@ -186,7 +186,7 @@ class _HealthState extends State<Health> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                             ),
-                            leading: const Text('Id',
+                            leading:  Text('${index+1}',
                                 style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.w900,
@@ -220,7 +220,7 @@ class _HealthState extends State<Health> {
                       );
                     })),
                     shrinkWrap: true,
-                    itemCount: 1),
+                    itemCount: 7),
               ],
             )
           ],

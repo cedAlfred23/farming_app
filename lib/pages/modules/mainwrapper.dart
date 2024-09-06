@@ -82,14 +82,15 @@ class _MainWrapperState extends State<MainWrapper> {
         },
         destinations: [
           NavigationDestination(
-            icon: SvgPicture.asset(
-              'assets/svgs/house.svg', color: Colors.black
-            ),
+            icon:
+                SvgPicture.asset('assets/svgs/house.svg', color: Colors.black),
             label: '',
           ),
           const NavigationDestination(
             icon: FontAwesome.FaIcon(
-                FontAwesome.FontAwesomeIcons.magnifyingGlass, color: Colors.black,),
+              FontAwesome.FontAwesomeIcons.magnifyingGlass,
+              color: Colors.black,
+            ),
             label: '',
           ),
           NavigationDestination(
@@ -99,15 +100,11 @@ class _MainWrapperState extends State<MainWrapper> {
             label: '',
           ),
           NavigationDestination(
-            icon: SvgPicture.asset(
-              'assets/svgs/bullhorn.svg'
-            ),
+            icon: SvgPicture.asset('assets/svgs/bullhorn.svg'),
             label: '',
           ),
           NavigationDestination(
-            icon: SvgPicture.asset(
-              'assets/svgs/messages.svg'
-            ),
+            icon: SvgPicture.asset('assets/svgs/messages.svg'),
             label: '',
           ),
         ],
@@ -183,7 +180,7 @@ class _MainWrapperState extends State<MainWrapper> {
             Navigator(
               key: _navigatorKeys[0],
               onGenerateRoute: (route) => MaterialPageRoute(
-                builder: (context) => const HomePage( title: '',),
+                builder: (context) => const HomePage(),
               ),
             ),
             Navigator(
@@ -274,7 +271,13 @@ class _MainWrapperState extends State<MainWrapper> {
                       leading: const Icon(Icons.book_rounded),
                       title: const Text('Profile'),
                       onTap: () {
+                        print('clickeed');
                         Navigator.pop(context);
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Settings())
+                        );
                       },
                     ),
                     ListTile(

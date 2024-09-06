@@ -1,4 +1,4 @@
-import 'package:farming_app/models/inventory_items.dart';
+import 'package:farming_app/data/inventory_items.dart';
 import 'package:farming_app/pages/modules/inventory/inventory_details_page.dart';
 import 'package:flutter/material.dart';
 
